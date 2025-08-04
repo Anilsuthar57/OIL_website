@@ -8,6 +8,7 @@ import About from "./components/About";
 import Services from "./components/Services";
 import Projects from "./components/Projects";
 import QHSE from "./components/QHSE";
+import CompletedProjects from "./components/CompletedProjects";
 
 
 
@@ -22,7 +23,7 @@ function App() {
       <QHSE/>
       <Services />
       <Projects />
-
+<CompletedProjects/>
      
     </>
   );

@@ -56,29 +56,34 @@ const projects = [
     description: "Additional Scraping Winch Units deployed on-site.",
   },
 ];
+
 export default function CompletedProjects() {
   return (
-    <section className="bg-white py-10 px-4 md:px-12 lg:px-24">
-      <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-8">
-        Completed Projects
-      </h2>
-      <div className="grid md:grid-cols-2 gap-6">
+    <section className="bg-white py-14 px-4 md:px-16 lg:px-28">
+      <div className="text-center mb-10">
+        <h2 className="text-4xl font-bold text-gray-800">
+          Completed Projects
+        </h2>
+        <p className="text-gray-500 mt-2">Trusted by major oilfield companies</p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="flex items-start gap-4 border-b pb-6 mb-6"
+            className="border rounded-xl shadow-sm hover:shadow-md transition p-5 flex gap-4 items-start"
           >
             <img
               src={project.logo}
               alt={project.title}
-              className="w-16 h-16 object-contain bg-white border p-1 rounded"
+              className="w-16 h-16 object-contain rounded-md border bg-white"
             />
             <div>
-              <p className="text-sm text-gray-500 mb-1">{project.date}</p>
               <h3 className="text-lg font-semibold text-blue-700">
                 {project.title}
               </h3>
-              <p className="text-gray-600 text-sm">{project.description}</p>
+              <p className="text-sm text-gray-500">{project.date}</p>
+              <p className="mt-2 text-gray-600 text-sm">{project.description}</p>
             </div>
           </div>
         ))}
